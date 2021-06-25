@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	button {
+	width: 150px;
+	height: 150px;
+	}
+	html {
+		background-color: #100a1c;
+		background-image: 
+			radial-gradient(50% 30% ellipse at center top , #201e40 0% , rgba(0,0,0,0) 100%),
+			radial-gradient(60% 50% ellipse at center bottom , #261226 0% , #100a1c 100%);
+		background-attachment: fixed;
+		color: #6cacc5;
+		text-align: center;
+		margin-top: 100px;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="temp3.css">
+<script type="text/javascript">
+	var turn = 2;
+
+	function cross(num) {
+    if ( turn/2 ==  1 ) {
+    turn++;
+    document.getElementById("b"+num).innerHTML = "x";
+    document.getElementById("b"+num).disabled = true;
+    }
+
+    else if (turn/3 == 1 ) {
+    turn--;
+    document.getElementById("b"+num).innerHTML = "o";
+    document.getElementById("b"+num).disabled = true;
+    }
+	}
+</script>
+<body>
+	<h1>TIC TAC TOE</h1>
+	<button id="b1" onclick="cross(1)">1</button>
+	<button id="b2" onclick="cross(2)">2</button>
+	<button id="b3" onclick="cross(3)">3</button><br>
+
+	<button id="b4" onclick="cross(4)">4</button>
+	<button id="b5" onclick="cross(5)">5</button>
+	<button id="b6" onclick="cross(6)">6</button><br>
+
+	<button id="b7" onclick="cross(7)">7</button>
+	<button id="b8" onclick="cross(8)">8</button>
+	<button id="b9" onclick="cross(9)">9</button>
+
+</body>
+</html>
